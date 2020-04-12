@@ -3,7 +3,7 @@
  *	Lab Section: 028
  *	Assignment: Lab #3  Exercise #2
  *	Exercise Description: [optional - include for your own benefit]
- *	A car has a feul-level sensor for PA3 to PA0
+ *	A car has a fuel-level sensor for PA3 to PA0
  *	- 0 means empty and 15 means full
  *
  *	This corresponds to a LED light output PC5 to PC0

@@ -1,10 +1,14 @@
 /*	Author: Patrick Dang
  * 	Partner(s) Name: 
  *	Lab Section: 028
- *	Assignment: Lab #3  Exercise #2
+ *	Assignment: Lab #3  Exercise #3
  *	Exercise Description: [optional - include for your own benefit]
- *	A car has a feul-level sensor for PA3 to PA0
+ *	A car has a fuel-level sensor for PA3 to PA0
  *	- 0 means empty and 15 means full
+ *
+ *	PA4 is 1 if the key is in the ignition
+ *	PA5 is 1 if the driver is seated
+ *	PA6 is 1 if the seatbelt is fastened
  *
  *	This corresponds to a LED light output PC5 to PC0
  *	- PC5 = level 1-2, PC4 = level 3-4, PC3 = level 5-6, PC2 = level 7-9, 
@@ -13,8 +17,10 @@
  *
  *	PC6 is the low fuel icon which lights up if the fuel level is 4 or less
  *
- *	Inputs: PA3 to PA0 (fuel level 0 to 15)
- *	Outputs: PC5 to PC0 (led indicator of level), PC6 (low fuel indicator)
+ *	PC7 is the Fasten seatbelt LED if the driver needs to fasten his/her seatbelt
+ *
+ *	Inputs: PA3 to PA0 (fuel level 0 to 15), PA4 (key in), PA5 (driver seated), PA6 (seatbelt)
+ *	Outputs: PC5 to PC0 (led indicator of level), PC6 (low fuel indicator), PA7 (need seatbelt)
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
