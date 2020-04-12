@@ -1,8 +1,9 @@
-/*	Author: lab
- *  Partner(s) Name: 
- *	Lab Section:
- *	Assignment: Lab #  Exercise #
+/*	Author: Patrick Dang
+ *  	Partner(s) Name: 
+ *	Lab Section: 028
+ *	Assignment: Lab #3  Exercise #1
  *	Exercise Description: [optional - include for your own benefit]
+ *	Count the number of 1's in ports A and B and output it to port C
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
