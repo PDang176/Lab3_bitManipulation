@@ -40,39 +40,53 @@ echo Running all tests..."\n\n
 
 # Add tests below
 
-test "PINA: 0x00 => PORTB: 0x00, PORTC: 0x00"
-setPINA 0x00
+test "PIND: 0x00, PINB: 0x00 => PORTB: 0x00"
+setPIND 0x00
+setPINB 0x00
 continue 5
 expectPORTB 0x00
-expectPORTC 0x00
 checkResult
 
-test "PINA: 0x0F => PORTB: 0x00, PORTC: 0xF0"
-setPINA 0x0F
-continue 5
-expectPORTB 0x00
-expectPORTC 0xF0
-checkResult
-
-test "PINA: 0xF0 => PORTB: 0x0F, PORTC: 0x00"
-setPINA 0xF0
-continue 5
-expectPORTB 0x0F
-expectPORTC 0x00
-checkResult
-
-test "PINA: 0xFF => PORTB: 0x0F, PORTC: 0xF0"
-setPINA 0xFF
-continue 5
-expectPORTB 0x0F
-expectPORTC 0xF0
-checkResult
-
-test "PINA: 0x29 => PORTB: 0x02, PORTC: 0x90"
-setPINA 0x29
+test "PIND: 0x23, PINB: 0x00 => PORTB: 0x02"
+setPIND 0x23
+setPINB 0x00
 continue 5
 expectPORTB 0x02
-expectPORTC 0x90
+checkResult
+
+test "PIND: 0xFF, PINB: 0x01 => PORTB: 0x03"
+setPIND 0xFF
+setPINB 0x01
+continue 5
+expectPORTB 0x03
+checkResult
+
+test "PIND: 0x02, PINB: 0x01 => PORTB: 0x01"
+setPIND 0x02
+setPINB 0x01
+continue 5
+expectPORTB 0x01
+checkResult
+
+test "PIND: 0x03, PINB: 0x00 => PORTB: 0x04"
+setPIND 0x03
+setPINB 0x00
+continue 5
+expectPORTB 0x04
+checkResult
+
+test "PIND: 0x03, PINB: 0x01 => PORTB: 0x05"
+setPIND 0x03
+setPINB 0x01
+continue 5
+expectPORTB 0x05
+checkResult
+
+test "PIND: 0x0F, PINB: 0x01 => PORTB: 0x05"
+setPIND 0x0F
+setPINB 0x01
+continue 5
+expectPORTB 0x05
 checkResult
 
 # Report on how many tests passed/tests ran
