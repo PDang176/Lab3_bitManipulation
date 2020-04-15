@@ -33,10 +33,8 @@ int main(void) {
 
 	unsigned char airbagEnabled = 0x00;
 	unsigned char airbagDisabled = 0x00;
-	unsigned char PBZero = 0x00;
     /* Insert your solution below */
     while (1) {
-	    PBZero = PINB & 0x01;
 	    if(PIND >= 0x23){
 		airbagEnabled = 0x02;
 	    }
@@ -44,7 +42,7 @@ int main(void) {
 		airbagDisabled = 0x04;
 	    }
 
-	    PORTB = PBZero | airbagEnabled | airbagDisabled;
+	    PORTB = airbagEnabled | airbagDisabled;
 	    airbagEnabled = 0x00;
 	    airbagDisabled = 0x00;
     }

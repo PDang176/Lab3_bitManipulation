@@ -54,18 +54,18 @@ continue 5
 expectPORTB 0x02
 checkResult
 
-test "PIND: 0xFF, PINB: 0x01 => PORTB: 0x03"
+test "PIND: 0xFF, PINB: 0x01 => PORTB: 0x02"
 setPIND 0xFF
 setPINB 0x01
 continue 5
-expectPORTB 0x03
+expectPORTB 0x02
 checkResult
 
-test "PIND: 0x02, PINB: 0x01 => PORTB: 0x01"
+test "PIND: 0x02, PINB: 0x01 => PORTB: 0x00"
 setPIND 0x02
 setPINB 0x01
 continue 5
-expectPORTB 0x01
+expectPORTB 0x00
 checkResult
 
 test "PIND: 0x03, PINB: 0x00 => PORTB: 0x04"
@@ -75,18 +75,18 @@ continue 5
 expectPORTB 0x04
 checkResult
 
-test "PIND: 0x03, PINB: 0x01 => PORTB: 0x05"
+test "PIND: 0x03, PINB: 0x01 => PORTB: 0x04"
 setPIND 0x03
 setPINB 0x01
 continue 5
-expectPORTB 0x05
+expectPORTB 0x04
 checkResult
 
-test "PIND: 0x0F, PINB: 0x01 => PORTB: 0x05"
+test "PIND: 0x0F, PINB: 0x01 => PORTB: 0x04"
 setPIND 0x0F
 setPINB 0x01
 continue 5
-expectPORTB 0x05
+expectPORTB 0x04
 checkResult
 
 # Report on how many tests passed/tests ran
